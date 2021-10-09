@@ -1,2 +1,3 @@
-# Provada-Website
-Provada website 
+![Provada Website Design preview](./design/Capture.JPG)
+
+## Welcome! 👋

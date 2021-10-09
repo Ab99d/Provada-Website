@@ -1,0 +1,650 @@
+/* start style header */
+/*=================================================================*/
+.nav-bar {
+    background-color: #457b9d;
+    display: flex;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            width: 120px;
+            height: 70px;
+            cursor: pointer;
+        }
+        & > i {
+            color: white;
+            font-size: 30px;
+            display: none;
+        }
+        .open-m {
+            display: flex !important
+        }
+        .main-ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            font-family: Heebo;
+            & > li {
+                margin-right: 2rem;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                i {
+                    color: white;
+                }
+            }
+        }
+        .ul {
+            display: flex;
+            list-style: none;
+            color: white;
+            font-family: Heebo;
+        }
+        .courses-li {
+            @extend .ul;
+            position: relative;
+            a {
+                color: white;
+                text-decoration: none;
+                margin-right: 10px;
+            }
+            i {
+                cursor: pointer;
+                padding: 0;
+                transition: all 0.5s ease-in-out;
+            }
+            &:hover {
+                i {
+                    transform: rotate(360deg);
+                }
+            }
+            ul {
+                display: flex;
+                width: 220px;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: #457b9d;
+                color: white;
+                border-radius: 10px;
+                border: 1px solid #457b9d;
+                list-style: none;
+                padding-top: 2.5rem;
+                display: none;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                li {
+                    cursor: pointer;
+                    padding: 0.7rem;
+                    transition: all 0.2s ease-in-out;
+                    &:last-child {
+                        border-radius: 0px 0px 10px 10px;
+                    }
+                    &:hover {
+                        background-color: #1d3557;
+                        font-size: 15px;
+                    }
+                }
+            }
+            &:hover {
+                ul {
+                    display: block;
+                    opacity: 1;
+                    position: absolute;
+                    left: 0;
+                    top: 20px;
+                }
+            }
+        }
+        .icdl {
+            @extend .courses-li;
+        }
+        .academia {
+            @extend .courses-li;
+            .research {
+                width: 222px;
+                position: relative;
+                order: 100;
+                .ul-1 {
+                    display: none;
+                    transition: opacity 0.5s ease-in-out;
+                }
+                &:hover {
+                    .ul-1  {
+                        padding-top: 0;
+                        display: block;
+                        position: absolute;
+                        order: 10;
+                        left: 219px;
+                        top: -1px;
+                        border-radius: 0 0 10px 10px;
+                    }
+                    li {
+                        transition: all 0.2s ease-in-out;
+                        font-size: 16px;
+                        &:hover {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        span {
+            width: 130px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 50px;
+            background-color: #1d3557;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            transition: all 0.2s ease-in-out;
+        &:hover {
+            color: #1d3557;
+            background-color: #f1faee;
+        }
+        }
+    }
+}
+/*=================================================================*/
+/* end style header */
+
+/* start style hero */
+/*=================================================================*/
+.hero {
+    margin-top: 8rem;
+    position: relative;
+    z-index: 9;
+    .container {
+        display: flex;
+        img {
+            width: 60%;
+        }
+        div {
+            margin-top: 2rem;
+            width: 40%;
+            h1 {
+                font-size: 43px;
+                line-height: 70px;
+                font-family: Spartan;
+                color: #39393B;
+            }
+            h4 {
+                margin-top: 0.5rem;
+                font-size: 22px;
+                font-family: Heebo;
+                color: #39393B;
+            }
+            button {
+                width: 120px;
+                height: 45px;
+                font-size: 15px;
+                font-family: Heebo;
+                border-radius: 20px 0;
+                background-color: #e63946;
+                color: white;
+                border: none;
+                margin: 2rem 1rem 0 0;
+                cursor: pointer;
+            }
+            span {
+                a {
+                    text-decoration: none;
+                    color: #e63946;
+                    font-family: Heebo;
+                }
+            }
+        }
+    }
+}
+/*=================================================================*/
+/* end style hero */
+
+/* start style our services */
+/*=================================================================*/
+.our-services {
+    margin-top: 8rem;
+    .container {
+        & > h2 {
+            @extend %main-h2;
+        }
+        .services {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, (100% / 3));
+            grid-template-rows: repeat(3, 270px);
+            & > div {
+                margin: 7px;
+                padding: 20px;
+                border-radius: 20px;
+                background-color: #f1faee;
+                font-family: Heebo;
+                position: relative;
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 70px;
+                    border-radius: 20px 20px 0 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #457b9d;
+                }
+                &:nth-child(7) {
+                    grid-column: 1 / 3;
+                }
+                h2 {
+                    font-size: 20px;
+                    color: white;
+                }
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: white;
+                    position: relative;
+                    span {
+                        border-radius: 5px;
+                        color: white;
+                        background-color: #1d3557;
+                        padding: 5px 15px;
+                        cursor: pointer;
+                        font-weight: 800;
+                    }
+                }
+                p {
+                    margin-top: 1rem;
+                    color: #1d3557;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+/*=================================================================*/
+/* end style our services */
+
+/* start style about us */
+/*=================================================================*/
+.about-us {
+    margin-top: 3rem;
+    position: relative;
+    & > img {
+        position: absolute;
+        top: -30px;
+        height: 785px;
+        width: 100%;
+    }
+    .container {
+        position: relative;
+        padding-top: 13rem;
+        div {
+            display: flex;
+            img {
+                width: 50%;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                p {
+                    font-size: 20px;
+                    font-family: Heebo;
+                }
+                h2 {
+                    font-weight: 800;
+                    font-size: 75px;
+                    font-family: Heebo;
+                    line-height: 90px;
+                    color: #1d3557;
+                }
+                i {
+                    font-size: 15px;
+                    font-family: Heebo;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+/*=================================================================*/
+/* end style about us */
+
+/* start style why choose us */
+/*=================================================================*/
+.why-choose-us {
+    margin-top: 12rem;
+    .container {
+        h2 {
+            font-family: Heebo;
+            font-weight: 800;
+            font-size: 40px;
+            color: #39393B;
+            margin-bottom: 20px;
+        }
+        & > p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            width: 700px;
+            font-family: Heebo;
+        }
+        button {
+            width: 140px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: #e63946;
+            color: white;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 5rem;
+        }
+        div {
+            display: grid;
+            grid-template-columns: repeat(4, (100% / 4));
+            div {
+                display: flex;
+                flex-direction: column;
+                border-left: 1px solid black;
+                padding: 1.5rem;
+                margin-right: 1rem;
+                &:last-child {
+                    padding-right: 0;
+                    margin-right: 0;
+                }
+                i {
+                    width: 65px;
+                    height: 65px;
+                    line-height: 30px;
+                    text-align: center;
+                    background-color: #e63946;
+                    padding: 1rem;
+                    border-radius: 50%;
+                    color: white;
+                    margin-bottom: 1rem;
+                    font-size: 30px;
+                }
+                h3 {
+                    margin-bottom: 2rem;
+                    font-family: Heebo;
+                    font-weight: 800;
+                    font-size: 19px;
+                    color: #39393B;
+                    margin-bottom: 12px;
+                }
+                p {
+                    font-size: 15px;
+                    font-family: Heebo;
+                }
+            }
+        }
+    }
+}
+/*=================================================================*/
+/* end style why choose us */
+
+/* start style our courses */
+/*=================================================================*/
+.our-courses {
+    margin-top: 8rem;
+    .container {
+        h2 {
+            @extend %main-h2;
+            margin-left: 0;
+        }
+        .courses {
+            transition: all .5s ease-in-out;
+            display: flex;
+            margin-top: 3rem;
+            position: relative;
+            & > div {
+                background-color: #f1faee;
+                border-radius: 15px;
+                padding: 1rem;
+                width: (100% / 3);
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+                img {
+                    width: 100%;
+                    height: 200px;
+                    margin-bottom: 2rem;
+                }
+                & > span {
+                    padding: 7px 15px;
+                    background-color: #e63946;
+                    color: white;
+                    font-family: Heebo;
+                }
+                h3 {
+                    margin-top: 1.5rem;
+                    font-family: Heebo;
+                    font-weight: 800;
+                    font-size: 25px;
+                    color: #39393B;
+                    margin-bottom: 12px;
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-family: Heebo;
+                    color: #39393B;
+                }
+                .Dr-Ahmad {
+                    display: flex;
+                    margin-top: 2rem;
+                    p {
+                        color: #457b9d;
+                        span {
+                            color: #5a6c60;
+                            font-size: 19px;
+                            line-height: 30px;
+                        }
+                    }
+                    i {
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        font-size: 30px;
+                        margin-right: 10px;
+                        &:first-of-type {
+                            color: rgb(0, 110, 255);
+                        }
+                        &:last-of-type {
+                            color: #1d3557;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*=================================================================*/
+/* end style why our courses */
+
+/* start style our courses */
+/*=================================================================*/
+.footer {
+    margin-top: 6rem;
+    background-color: #2a2a2a;
+    height: 500px;
+    .container {
+        height: 438px;
+        position: relative;
+        display: flex;
+        .turkey {
+            background-color: #3d3d3d;
+            margin-right: 2rem;
+            color: white;
+            width: 300px;
+            height: 270px;
+            font-family: Heebo;
+            padding: 3rem 1.5rem 1.5rem;
+            border-radius: 0px 0px 15px 15px;
+            h2 {
+                @extend %main-h2;
+                margin-left: 0;
+                color: white;
+                font-family: Heebo;
+                &:after {
+                    background-color: white;
+                }
+            }
+            p {
+                &:first-of-type {
+                    margin-bottom: 15px;
+                    margin-top: 2rem;
+                }
+            }
+            p {
+                &:not(:first-of-type) {
+                    font-weight: 800;
+                }
+                &:not(:last-of-type) {
+                    margin-bottom: 10px;
+                }
+                span {
+                    font-weight: 400;
+                    color: #a8dadc;
+                }
+            }
+        }
+        .united-states {
+            @extend .turkey;
+            width: 280px;
+        }
+        .links {
+            margin: 4rem 5rem 0 7rem;
+            h2 {
+            @extend %main-h2;
+            margin-left: 0;
+            color: white;
+            font-family: Heebo;
+            &:after {
+                background-color: white;
+            }
+        }
+            ul {
+                list-style: none;
+                font-family: Heebo;
+                color: #f1faee;
+                li {
+                    cursor: pointer;
+                    margin-top: 0.7rem;
+                    &:first-child {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+        .academia {
+            @extend .links;
+            margin: 4rem 0 0 0;
+        }
+        .follow-us {
+            position: absolute;
+            top: 310px;
+            h2 {
+                @extend %main-h2;
+                font-family: Heebo;
+                color: white;
+                &:after {
+                    background-color: white;
+                }
+            }
+            a {
+                i {
+                    margin: 2rem 0 0 1rem;
+                    color: white;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 20px;
+                }
+            }
+            a:nth-of-type(1) {
+                i {
+                    background-color: #25D366;
+                }
+            }
+            a:nth-of-type(2) {
+                i {
+                    background-color: #FF0000;
+                }
+            }
+            a:nth-of-type(3) {
+                i {
+                    background-color: #0077B5;
+                }
+            }
+            a:nth-of-type(4) {
+                i {
+                    background-color: #D40265;
+                }
+            }
+            a:nth-of-type(5) {
+                i {
+                    background-color: #0077B5;
+                }
+            }
+            a:nth-of-type(6) {
+                i {
+                    background-color: purple;
+                }
+            }
+        }
+        .subscribe {
+            position: absolute;
+            top: 310px;
+            left: 430px;
+            h2 {
+                @extend %main-h2;
+                font-family: Heebo;
+                color: white;
+                &:after {
+                    background-color: white;
+                }
+            }
+            input {
+                width: 350px;
+                margin-top: 2rem;
+                height: 2.2rem;
+                border-radius: 30px;
+                border: none;
+                outline: none;
+                padding-left: 10px;
+            }
+            span {
+                position: absolute;
+                top: 67px;
+                right: 0px;
+                background-color: #006eff;
+                color: white;
+                padding: 10px;
+                height: 2.2rem;
+                border-radius: 30px;
+                width: 70px;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+    .copyright {
+        width: 100%;
+        bottom: 0;
+        color: white;
+        position: absolute;
+        text-align: center;
+        padding: 7px;
+        font-family: Heebo;
+        margin: auto;
+        background-color: #3d3d3d;
+    }
+}
+/*=================================================================*/
+/* end style why our courses */
